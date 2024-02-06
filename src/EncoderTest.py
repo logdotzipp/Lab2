@@ -1,3 +1,7 @@
+"""! @file EncoderTest.py
+This program tests the Encoder class by running a DC motor at a speed and reading the encoder count.
+Also makes use of the MotorDriver class
+"""
 import pyb
 import micropython
 from motor_driver import MotorDriver
