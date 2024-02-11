@@ -70,13 +70,13 @@ $(function(){initNavTree('class_encoder_1_1_encoder.html',''); initResizable(); 
 </div><!--header-->
 <div class="contents">
 
-<p>This class implements a L6206 H-Bridge Motor Controller Shield.  
+<p>This class contains functionality to setup, read, and zero a quadrature encoder on a 16 bit timer channel on an STM-32.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a52e49b2bbbc5b153f100aa2861515f72" id="r_a52e49b2bbbc5b153f100aa2861515f72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52e49b2bbbc5b153f100aa2861515f72">__init__</a> (self, ENA, ENB, timer, CHA, CHB)</td></tr>
-<tr class="memdesc:a52e49b2bbbc5b153f100aa2861515f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an Encoder class that intializes the Encoder's pins and sets the set GPIO Pin Timer and respective channels.  <br /></td></tr>
+<tr class="memdesc:a52e49b2bbbc5b153f100aa2861515f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an Encoder object that intializes the Encoder's pins and sets the set GPIO Pin Timer and respective channels.  <br /></td></tr>
 <tr class="separator:a52e49b2bbbc5b153f100aa2861515f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d119b008d7b6f8947069e60c248a1a2" id="r_a7d119b008d7b6f8947069e60c248a1a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d119b008d7b6f8947069e60c248a1a2">read</a> (self)</td></tr>
 <tr class="memdesc:a7d119b008d7b6f8947069e60c248a1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function reads the Encoder's position as a positive/negative integer.  <br /></td></tr>
@@ -111,7 +111,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ae1f81dad3df57836c30881c02fc115b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class implements a L6206 H-Bridge Motor Controller Shield. </p>
+<div class="textblock"><p>This class contains functionality to setup, read, and zero a quadrature encoder on a 16 bit timer channel on an STM-32. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a52e49b2bbbc5b153f100aa2861515f72" name="a52e49b2bbbc5b153f100aa2861515f72"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a52e49b2bbbc5b153f100aa2861515f72">&#9670;&#160;</a></span>__init__()</h2>
@@ -152,16 +152,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates an Encoder class that intializes the Encoder's pins and sets the set GPIO Pin Timer and respective channels. </p>
+<p>Creates an Encoder object that intializes the Encoder's pins and sets the set GPIO Pin Timer and respective channels. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ENA</td><td>GPIO pin associated with Encoder Channel A. </td></tr>
     <tr><td class="paramname">ENB</td><td>GPIO pin associated with Encoder Channel B. </td></tr>
-    <tr><td class="paramname">timer</td><td>Timer for the Encoder. </td></tr>
+    <tr><td class="paramname">timer</td><td>Timer object used as a counter. </td></tr>
     <tr><td class="paramname">CHA</td><td>Timer Channel corresponding to Encoder Channel A. </td></tr>
     <tr><td class="paramname">CHB</td><td>Timer Channel corresponding to Encoder Channel B. </td></tr>
-    <tr><td class="paramname">lastCount</td><td>Most recent Encoder count. </td></tr>
-    <tr><td class="paramname">totalCount</td><td>Total Encoder count. </td></tr>
+    <tr><td class="paramname">lastCount</td><td>Stores the previous value of the encoder </td></tr>
+    <tr><td class="paramname">totalCount</td><td>Stores the current total value of the encoder </td></tr>
   </table>
   </dd>
 </dl>
@@ -188,7 +188,7 @@ Public Attributes</h2></td></tr>
 <p>Accounts for under- and over-flow cases by comparing the most recent and current count from the Encoder. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">count</td><td>Current Encoder count. </td></tr>
-    <tr><td class="paramname">d</td><td>Changes from last Encoder Count to the most recent Encoder count. </td></tr>
+    <tr><td class="paramname">d</td><td>Difference between the current encoder reading and the previous encoder reading. </td></tr>
   </table>
   </dd>
 </dl>
@@ -196,7 +196,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/<a class="el" href="_encoder_8py.html">Encoder.py</a></li>
+<li>C:/Users/canny/OneDrive/Desktop/ME_405/Lab2/src/<a class="el" href="_encoder_8py.html">Encoder.py</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

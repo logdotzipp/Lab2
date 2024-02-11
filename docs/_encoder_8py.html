@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lab 2: Encoder Class: src/Encoder.py File Reference</title>
+<title>Lab 2: Encoder Class: C:/Users/canny/OneDrive/Desktop/ME_405/Lab2/src/Encoder.py File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,23 +63,30 @@ $(function(){initNavTree('_encoder_8py.html',''); initResizable(); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">Encoder.py File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This program is an Encoder reading class where the program is able to read a 12V Brushed DC motor using a L6206 H-Bridge Motor Driver.  
+<p>This program is an Encoder Reading class where the program is able to read a quadrature encoder using a the built in counters on the STM-32.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_encoder_1_1_encoder.html">Encoder.Encoder</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class implements a L6206 H-Bridge Motor Controller Shield.  <a href="class_encoder_1_1_encoder.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class contains functionality to setup, read, and zero a quadrature encoder on a 16 bit timer channel on an STM-32.  <a href="class_encoder_1_1_encoder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a35b7afd5afecc2e5a9459d8aec28b777" id="r_a35b7afd5afecc2e5a9459d8aec28b777"><td class="memItemLeft" align="right" valign="top"><a id="a35b7afd5afecc2e5a9459d8aec28b777" name="a35b7afd5afecc2e5a9459d8aec28b777"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Encoder.coder</b> = <a class="el" href="class_encoder_1_1_encoder.html">Encoder</a>(pyb.Pin.board.PB6, pyb.Pin.board.PB7, 4, 1, 2)</td></tr>
+<tr class="separator:a35b7afd5afecc2e5a9459d8aec28b777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This program is an Encoder reading class where the program is able to read a 12V Brushed DC motor using a L6206 H-Bridge Motor Driver. </p>
-<p>The class initializes the Encoder's pins and Timer to read the Motor's position. </p>
+<div class="textblock"><p>This program is an Encoder Reading class where the program is able to read a quadrature encoder using a the built in counters on the STM-32. </p>
+<p>The class initializes the Encoder's pins and Timer, and contains functionality for reading and re-zeroing the encoder value. This class is intended to be used with a 16bit timer channel. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

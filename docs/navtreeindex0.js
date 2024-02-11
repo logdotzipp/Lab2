@@ -1,7 +1,7 @@
 var NAVTREEINDEX0 =
 {
 "_encoder_8py.html":[1,0,0,0],
-"_encoder_test_8py.html":[1,0,0,1],
+"_encoder_and_motor_test_8py.html":[1,0,0,1],
 "annotated.html":[0,0],
 "class_encoder_1_1_encoder.html":[0,0,0,0],
 "class_encoder_1_1_encoder.html#a52e49b2bbbc5b153f100aa2861515f72":[0,0,0,0,0],
